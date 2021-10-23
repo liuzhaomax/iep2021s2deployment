@@ -1,0 +1,15 @@
+{
+  "name": "deploy_fe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://34.129.138.125:8888/liuzhaomax/deploy_fe.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

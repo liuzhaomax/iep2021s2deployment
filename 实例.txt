@@ -1,0 +1,35 @@
+ls                                       列出文件夹中的东西
+cat /etc/os-release              看操作系统环境
+docker --version                 看docker环境
+git --version
+vim --help                          vim 编辑器
+ssh --version
+
+docker ps  [-a]                     查看容器
+docker stop <容器 ID>        停止容器
+docker restart <容器 ID>     重启容器
+docker rm <容器 ID>           删除容器
+docker exec -it <容器 ID> /bin/bash   启动一个远程Shell
+
+docker volume create <数据卷名>   创建数据卷
+docker run -dp 80:5000 -v <数据卷名>:/etc/<文件夹目录名> <接受卷文件夹名>        将数据卷  挂载到某路径下
+
+
+toolbox                               拉取toolbox镜像（本质是创建一个含有toolbox的容器）
+echo "123" >123.txt          创建123.txt 在toolbox中
+exit
+
+文件共享映射关系
+--bind=/:/media/root/ 
+--bind=/mnt/disks/:/media/root/mnt/disks/ 
+--bind=/var/:/media/root/var/ 
+--bind=/home:/media/root/home/ 
+--bind=/etc/resolv.conf:/etc/resolv.conf
+
+进入共享目录
+在toolbox中
+cd /media/root
+cd home
+ls
+cd 宿主机目录
+cp /root/123.txt ./        拷贝文件从/root 到 ./下面
